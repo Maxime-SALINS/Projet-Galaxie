@@ -85,6 +85,10 @@
 
 #about-team {
     /* TODO: Se réferer aux Maquettes */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: white;
 }
 
 .card-team {
@@ -112,9 +116,18 @@
     border-radius: 50%;
 }
 
+.img-size-card-team{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
 /* Destinations Section */
 #list-destination {
     /* TODO: Se référer aux Maquettes */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 #destinations {
