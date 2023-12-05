@@ -107,14 +107,6 @@
     border-radius: 5px;
 }
 
-.card-team-avatar {
-    /* code provisoire 
-     intégrer les images de profil des membres de l'équipe */
-    width: 150px;
-    height: 150px;
-    background-color: grey;
-    border-radius: 50%;
-}
 
 .img-size-card-team{
     width: 150px;

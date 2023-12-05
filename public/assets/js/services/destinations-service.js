@@ -36,23 +36,20 @@ function getDestination(destinations, destinationId) {
  * @param {Array} destinations 
  */
 function getDestinations(destinations) {
-    // TODO:
-    // Initialisation de la variable linkToDestination pour créer un lien vers la page destinations.html
-    // Elle contient le début du lien vers la page destinations.html et doit être concaténée avec l'id de la destination
-    let linkToDestination = "destinations.html?destination=";
-    // Création d'une boucle pour afficher les destinations dans la page à partir du tableau destinations
-    // et de la constante destinationContainer
+
     for (let i = 0; i < destinations.length; i++) {
-        // Debug
-        console.log(destinations[i].name);
-        console.log(destinations[i].location);
-        console.log(destinations[i].id);
-        // Création d'un élément HTML avec la classe destination
-        // et stockage dans la variable destinationContainer
-        // Indice : document.createElement('div');
-        // Ajout du contenu HTML dans la variable destinationContainer
-        // Indice : destinationContainer.innerHTML = `...`;
-        // Ajout de destinationContainer dans la page HTML
-        // Indice : document.getElementById('list-destination').appendChild(destinationContainer);
+        
+        let destinationContainer = document.createElement('div');
+        destinationContainer.innerHTML = `
+        <div class="destination">
+            <img src=${destinations[i].img} alt="une image de présentatation">
+            <h3>${destinations[i].name}</h3>
+            <hr>
+            <p>${destinations[i].location}</p>
+            <a href="destinations.html?destination=${destinations[i].id}">En savoir plus</a>
+        </div>
+
+        `
+        document.getElementById('list-destination').appendChild(destinationContainer);
     }
 }
