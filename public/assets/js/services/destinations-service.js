@@ -48,7 +48,6 @@ function getDestinations(destinations) {
             <p>${destinations[i].location}</p>
             <a href="destinations.html?destination=${destinations[i].id}">En savoir plus</a>
         </div>
-
         `
         document.getElementById('list-destination').appendChild(destinationContainer);
     }

@@ -7,11 +7,7 @@ console.log('assets/js/services/team-service.js chargé ✅');
 function getTeam(team) {
     // Création d'une boucle pour afficher les membres de l'équipe dans la page à partir du tableau team
     for (let i = 0; i < team.length; i++) {
-        // Debug
-        console.log(team[i].name);
-        console.log(team[i].job);
-        console.log(team[i].img);
-    
+
         // Création d'un élément HTML pour chaque membre de l'équipe
         let teamContainer = document.createElement('div');
         // Ajout de la classe card-team à chaque élément HTML créé
