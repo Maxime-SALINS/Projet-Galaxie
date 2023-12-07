@@ -9,16 +9,28 @@ console.log('assets/js/destinations-service.js chargé ✅');
  * redirige vers une page d'erreur 404 si l'id de la destination n'existe pas
  */
 function getDestination(destinations, destinationId) {
-    // TODO:
-    // Initialisation des variables result et error
-    // Boucle sur le tableau des destinations pour trouver la destination correspondante à l'id
-        // Debug
-        // console.log(destinations[i].id);
-        // si l'id de la destination correspond à destinationId
-            // on stocke la destination dans la variable result
-    // fin de la boucle
-    // Si la variable result est vide (undefined)
-    // cela signifie que l'id de la destination n'existe pas
+    let result = "";
+    let error = "";
+    for (let i = 0; i < destinations.length; i++) {
+        if (destinations[i].id === destinationId){
+            result = destinations[i]
+        } else {
+           error = 404;
+        }
+    }
+    
+    console.log(result);
+
+    if (result === "") { 
+        window.location.href = 'error.html';
+    }
+
+    let destinationname = document.getElementById('destination-name');
+    destinationname.innerHTML = result.name
+    let destinationloca = document.getElementById('destination-location');
+    destinationloca.innerHTML = result.location
+
+
         // on stocke le code erreur 404 dans la variable error
         // on redirige vers la page d'erreur en passant le code erreur dans l'URL 
         // en paramètre à la clé error
