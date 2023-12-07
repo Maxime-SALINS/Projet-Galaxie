@@ -17,12 +17,12 @@ function sendMail(infoContact) {
 	// L'envoie d'email peut se vérifier dans l'interface d'EmailJS
 	return Email.send({
 		Host: "smtp.elasticemail.com",
-		Username: "TODO: à compléter",
-		Password: "TODO: à compléter",
+		Username: "themaxcraft13@gmail.com",
+		Password: "5F91D981E69D45DC40119BBFA01B9D7F8160",
 		To: 'contact@gmail.com',
-		From: "les-gardiens-dela-galaxie@gmail.com",
+		From: "themaxcraft13@gmail.com",
 		Subject: "Une demande de contact depuis le site Space Tour",
-		Body: "Une demande de contact a été envoyée depuis le site Space Tour. TODO: Envoyer les informations soumises du formulaire."
+		Body: "Une demande de contact a été envoyée depuis le site Space Tour. " + infoContact.name + infoContact.email + infoContact.message
 	}).then(
 		// si l'email est envoyé, afficher une alerte de succès
 		message => alert(message, "Votre message a bien été envoyé !")
