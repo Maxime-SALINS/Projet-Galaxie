@@ -22,7 +22,7 @@ function getDestination(destinations, destinationId) {
     console.log(result);
 
     if (result === "") { 
-        window.location.href = 'error.html';
+        window.location.href = "error.html?error=" + error;
     }
 
     let destinationname = document.getElementById('destination-name');
@@ -30,17 +30,6 @@ function getDestination(destinations, destinationId) {
     let destinationloca = document.getElementById('destination-location');
     destinationloca.innerHTML = result.location
 
-
-        // on stocke le code erreur 404 dans la variable error
-        // on redirige vers la page d'erreur en passant le code erreur dans l'URL 
-        // en paramètre à la clé error
-        // Indice : window.location.href = "error.html?error=" + error;
-    // Si la variable error est égale à false
-        // cela signifie que l'id de la destination existe
-        // on affiche les informations de la destination dans la page destinations.html
-        // Affichage du nom de la destination dans le titre de la page
-        // Affichage du contenu supplémentaire de la destination dans la page
-    // Debug du résultat de la recherche si la destination existe
 }
 
 /**
