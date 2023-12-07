@@ -11,4 +11,4 @@ let destination = parseInt(params.get('destination'));
 console.log("Destination Param : ", destination);
 
 // Appel de la fonction getDestination TODO: à compléter
-// getDestination(destinations, destination);
+getDestination(destinations, destination);
